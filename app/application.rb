@@ -26,9 +26,11 @@ class Application
         end
     if req.path.match(/add/)
       search_term = req.params["q"]
-      resp.write handle_search(search_term)
-    else
-      resp.write "Path Not Found"
+      if @@list.include?(search_term)
+        @@cart << "#{search_term}"
+      else
+      resp.write "Item Not Found"
+      end
     end
 
 
