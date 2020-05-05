@@ -34,7 +34,7 @@ class Application
         @@cart << "#{search_term}"
         resp.write "added ""#{search_term}"
       else
-      resp.write "Path Not Found"
+        resp.write "Path Not Found"
       end
     end
     resp.finish
