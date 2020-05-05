@@ -22,7 +22,7 @@ class Application
       if @@cart = []
         resp.write "Your cart is empty!"
       else
-        @@cart.all
+        resp.write @@cart.all
       end
     end
     
