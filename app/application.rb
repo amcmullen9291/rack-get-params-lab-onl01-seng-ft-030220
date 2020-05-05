@@ -26,6 +26,7 @@ class Application
         resp.write "#{item}\n"
       end
     end
+    end
     
     if req.path.match(/add/)
       search_term = req.params["q"]
@@ -35,8 +36,6 @@ class Application
       resp.write "Item Not Found"
       end
     end
-
-
     resp.finish
   end
 
