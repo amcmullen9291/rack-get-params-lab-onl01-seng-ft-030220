@@ -31,7 +31,7 @@ class Application
     if req.path.match(/add/)
       search_term = req.params["q"]
       if @@items.include?("#{search_term}")
-        @@cart << "#{search_term}"
+        @@cart << search_term
         resp.write "added #{search_term}"
       else
         resp.write "Item Not Found"
