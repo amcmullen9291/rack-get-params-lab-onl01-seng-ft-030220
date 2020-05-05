@@ -17,13 +17,15 @@ class Application
     else
       resp.write "Path Not Found"
     end
-        if req.path.match(/cart/)
-          if @@cart = []
-            resp.write "Your cart is empty!"
-          else
-          @@cart.all
-          end
-        end
+    
+    if req.path.match(/cart/)
+      if @@cart = []
+        resp.write "Your cart is empty!"
+      else
+        @@cart.all
+      end
+    end
+    
     if req.path.match(/add/)
       search_term = req.params["q"]
       if @@list.include?(search_term)
